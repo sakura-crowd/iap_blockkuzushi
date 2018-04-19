@@ -15,13 +15,15 @@
 
 
 - この Unity プロジェクトは [いますぐ始めるアプリ内課金 - itemstore BLOG](http://blog.item-store.net/archive/category/いますぐ始めるアプリ内課金) の教材サンプルです。  
-ブロック崩しのほかに、アプリ内課金の実装方法についても説明しているので、よろしければご覧ください。
-- [GooglePlay のブロック崩し（教材）のページ](https://play.google.com/store/apps/details?id=com.SakuraCrowd.test_nonIAP_Unity_BlockKuzushi) から Android 端末(4.2以上)にダウンロードしてプレイできます。  
-次の QR コードからも GooglePlay のインストールページにアクセスできます。  
-![GooglePlay QR code](DocImage/BlockKuzushiGooglePlayQR.png "GooglePlay QR code")
-- この Unity プロジェクトにはアプリ内課金の機能は含まれていません。
-- この Unity プロジェクトはライセンスに基づき利用していただいてかまいませんが、私は一切の責任を負わず、ご質問やご要望にも対応しないことをご理解ください。
-- 開発環境は Unity 2017.2.0f3 (64bit) です。
+
+- アプリ内課金なしのブロック崩しについても [別のgithub](https://github.com/sakura-crowd/sample_blockkuzushi) で公開しています。  
+
+# itemstore_Sample_Unity_BlockKuzushi について
+ - Unity version2017.2.0f3(64bit)で動作確認をしております。
+ - 同梱SDK  
+   Unity Plugin : appc_plugin_2.0.2.unitypackage
+ - 本サンプルプロジェクトは Unity による課金ゲーム開発の教材として公開されました。ブロック崩しの基本機能とitemstoreのアプリ内課金機能の実装サンプルとなります。
+ - この Unity プロジェクトはライセンスに基づき利用していただいてかまいませんが、私は一切の責任を負わず、ご質問やご要望にも対応しないことをご理解ください。
 
 # Unity での開き方
 1. Clone or Download などで sample_blockkuzushi を丸ごとダウンロードします。
