@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="[パッケージ名]"
+	android:installLocation="preferExternal"
+    android:versionCode="2"
+    android:versionName="1.1">
+
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:anyDensity="true"/>
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <!-- require AppC -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- require itemstore -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <!-- require Push Start -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="[パッケージ名].permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="[パッケージ名].permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- require Push End -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name">
+        <activity
+    		android:label="@string/app_name" 
+    		android:screenOrientation="portrait" 
+    		android:launchMode="singleTask" 
+    		android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale" 
+    		android:name="com.unity3d.player.UnityPlayerNativeActivity">
+    		<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+    	</activity>
+
+        <!-- require itemstore Start -->
+        <activity
+            android:name="net.app_c.sdk.ItemStoreActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- require itemstore End -->
+
+        <!-- require Push Start -->
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="[パッケージ名]" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="net.app_c.sdk.PushService" />
+        <!-- require Push End -->
+
+		<!-- require Recover Start -->
+        <activity
+            android:name="net.app_c.sdk.RecoverGenerateActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="net.app_c.sdk.RecoverRestoreActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- require Recover End -->
+
+    </application>
+</manifest>
