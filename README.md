@@ -1,4 +1,4 @@
-# アプリ内課金ありのブロック崩しの Unity プロジェクト
+# ブロック崩しの Unity プロジェクト
 
 ![アプリのショートプレイデモ](DocImage/Demo-IAP-android.gif "アプリのショートプレイデモ")  
  [Youtube でプレイデモ動画](https://youtu.be/5KTY60i6jDU) もご覧になれます。
@@ -24,6 +24,7 @@
    Unity Plugin : appc_plugin_2.0.2.unitypackage
  - 本サンプルプロジェクトは Unity による課金ゲーム開発の教材として公開されました。ブロック崩しの基本機能とitemstoreのアプリ内課金機能の実装サンプルとなります。
  - この Unity プロジェクトはライセンスに基づき利用していただいてかまいませんが、私は一切の責任を負わず、ご質問やご要望にも対応しないことをご理解ください。
+ - itemstore Unity 用パッケージをインポートした Unity プロジェクトを私個人の github で公開する際には事前に itemstore 様からの許可をいただいております。
 
 # Unity での開き方
 1. Clone or Download などで sample_blockkuzushi を丸ごとダウンロードします。
