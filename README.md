@@ -1,4 +1,4 @@
-#アプリ内課金を含むブロック崩しの Unity プロジェクト
+# アプリ内課金を含むブロック崩しの Unity プロジェクト
 
 ![アプリのショートプレイデモ](DocImage/Demo-IAP-android.gif "アプリのショートプレイデモ")  
  [Youtube でプレイデモ動画](https://youtu.be/5KTY60i6jDU) もご覧になれます。
